@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/wade0/Desktop/TestStripApp(code)/app/src/main/res/layout/activity_air.xml" value="0.27395833333333336" />
+        <entry key="..\:/Users/wade0/Desktop/TestStripApp(code)/app/src/main/res/layout/activity_color.xml" value="0.27395833333333336" />
+        <entry key="..\:/Users/wade0/Desktop/TestStripApp(code)/app/src/main/res/layout/activity_grid.xml" value="0.27395833333333336" />
+        <entry key="..\:/Users/wade0/Desktop/TestStripApp(code)/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/wade0/Desktop/TestStripApp(code)/app/src/main/res/layout/activity_map.xml" value="0.27395833333333336" />
+        <entry key="..\:/Users/wade0/Desktop/TestStripApp(code)/app/src/main/res/layout/activity_mark.xml" value="0.27395833333333336" />
+        <entry key="..\:/Users/wade0/Desktop/TestStripApp(code)/app/src/main/res/layout/activity_photo_position.xml" value="0.14322916666666666" />
+        <entry key="..\:/Users/wade0/Desktop/TestStripApp(code)/app/src/main/res/layout/activity_raman_method.xml" value="0.27395833333333336" />
+        <entry key="..\:/Users/wade0/Desktop/TestStripApp(code)/app/src/main/res/layout/activity_recognition_method.xml" value="0.176" />
+        <entry key="..\:/Users/wade0/Desktop/TestStripApp(code)/app/src/main/res/layout/activity_recognition_method_posion.xml" value="0.14322916666666666" />
+        <entry key="..\:/Users/wade0/Desktop/TestStripApp(code)/app/src/main/res/layout/activity_recognition_result.xml" value="0.27395833333333336" />
+        <entry key="..\:/Users/wade0/Desktop/TestStripApp(code)/app/src/main/res/layout/activity_test_strip2_class.xml" value="0.27395833333333336" />
+        <entry key="..\:/Users/wade0/Desktop/TestStripApp(code)/app/src/main/res/layout/activity_test_strip3_class.xml" value="0.264" />
+        <entry key="..\:/Users/wade0/Desktop/TestStripApp(code)/app/src/main/res/layout/activity_test_strip4_class.xml" value="0.27395833333333336" />
+        <entry key="..\:/Users/wade0/Desktop/TestStripApp(code)/app/src/main/res/layout/grid_layout.xml" value="0.27395833333333336" />
+        <entry key="..\:/Users/wade0/Desktop/TestStripApp(code)/app/src/main/res/layout/image_recognition_layout.xml" value="0.27395833333333336" />
+        <entry key="..\:/Users/wade0/Desktop/TestStripApp(code)/app/src/main/res/layout/raman_recognition_layout.xml" value="0.27395833333333336" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

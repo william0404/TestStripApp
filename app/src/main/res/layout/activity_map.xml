@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:autofit="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="GPS定位"
+            android:textColor="#000000"
+            android:textSize="40sp"
+            app:autoSizeTextType="uniform" />
+
+    </LinearLayout>
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5" />
+
+    <LinearLayout
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="26"
+        android:background="#ffffff"
+        android:orientation="vertical">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="25"
+            android:orientation="vertical">
+
+
+            <im.delight.android.webview.AdvancedWebView
+                android:id="@+id/webview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:background="#ffffff"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="經度:"
+                android:textColor="#000000"
+                android:textSize="40sp"
+                app:autoSizeTextType="uniform" />
+
+            <TextView
+                android:id="@+id/lat_text"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="6"
+                android:gravity="center|left"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="#000000"
+                android:textSize="40sp"
+                app:autoSizeTextType="uniform" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:background="#ffffff"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="緯度:"
+                android:textColor="#000000"
+                android:textSize="40sp"
+                app:autoSizeTextType="uniform" />
+
+            <TextView
+                android:id="@+id/lng_text"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="6"
+                android:gravity="center|left"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="#000000"
+                android:textSize="40sp"
+                app:autoSizeTextType="uniform" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:background="#ffffff"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="地址:"
+                android:textColor="#000000"
+                android:textSize="40sp"
+                app:autoSizeTextType="uniform" />
+
+            <TextView
+                android:id="@+id/address_text"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="6"
+                android:gravity="center|left"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                app:autoSizeTextType="uniform" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:maxLines="1"
+        android:onClick="getAir"
+        android:singleLine="true"
+        android:text="連結GPS資訊"
+        android:textSize="40sp"
+        app:autoSizeTextType="uniform" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:onClick="captureClick"
+        android:singleLine="true"
+        android:text="確認"
+        android:textSize="40sp"
+        app:autoSizeTextType="uniform" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1" />
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:singleLine="true"
+        android:text="刪除"
+        app:autoSizeTextType="uniform"
+        android:textSize="40sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1" />
+</LinearLayout>
