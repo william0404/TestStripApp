@@ -8,60 +8,85 @@
     android:orientation="vertical"
     >
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5" />
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5" />
+
     <Button
         android:id="@+id/button4"
-        android:layout_width="248dp"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="50dp"
         android:layout_weight="3"
-        android:background="#FFFFB9"
         android:maxLines="1"
         android:onClick="gotoColor"
         android:singleLine="true"
         android:text="檢測項目"
-        android:textSize="35sp" />
+        android:background="#FFFFB9"
+        android:textSize="20sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2" />
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="243dp"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_gravity="center"
         android:layout_weight="3"
-        android:background="#FFFFB9"
         android:maxLines="1"
         android:onClick="gotoAir"
         android:singleLine="true"
-        android:layout_marginTop="50dp"
         android:text="天氣資訊"
-        android:textSize="35sp" />
+        android:textSize="20sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2" />
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="243dp"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_gravity="center"
         android:layout_weight="3"
-        android:background="#FFFFB9"
         android:onClick="gotoMap"
         android:singleLine="true"
-        android:layout_marginTop="50dp"
         android:text="地圖資訊"
-        android:textSize="35sp" />
+        android:textSize="20sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2" />
+
 
     <Button
         android:id="@+id/button"
-        android:layout_width="243dp"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_gravity="center"
         android:layout_weight="3"
-        android:background="#FFFFB9"
         android:onClick="gotoMark"
         android:singleLine="true"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="50dp"
         android:text="報告輸出"
-        android:textSize="35sp" />
+        android:textSize="20sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -69,18 +94,30 @@
         android:layout_weight="1"
         android:orientation="horizontal">
 
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
         <TextView
             android:id="@+id/textView"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginRight="13dp"
             android:layout_weight="1.2"
             android:gravity="center|right"
             android:singleLine="true"
             android:text="NBC Defence Materials Lab"
             app:autoSizeTextType="none" />
 
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1" />
 
     </LinearLayout>
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5" />
 </LinearLayout>

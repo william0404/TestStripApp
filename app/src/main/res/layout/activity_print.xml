@@ -266,17 +266,6 @@
         android:textSize="40dp"
         autofit:minTextSize="8dp"
         android:layout_width="match_parent">
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="captureClick"
-        android:singleLine="true"
-        android:text=" 儲存"
-        android:maxLines="1"
-        android:textSize="40dp"
-        app:autoSizeTextType="uniform"
-         />
 
     </me.grantland.widget.AutofitLayout>
 
@@ -284,6 +273,17 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.2" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:onClick="captureClick"
+        android:singleLine="true"
+        android:text=" 儲存"
+        android:textSize="40dp"
+        app:autoSizeTextType="uniform" />
 
     <me.grantland.widget.AutofitLayout
         android:layout_height="0dp"

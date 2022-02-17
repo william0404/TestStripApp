@@ -25,39 +25,44 @@
 
         <Button
             android:id="@+id/testStrip1"
-            android:layout_width="match_parent"
+            android:layout_width="255dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="75dp"
             android:layout_marginBottom="50dp"
             android:layout_weight="1"
+            android:background="#FFFFB9"
+            android:onClick="openAlbum"
             android:text="從相簿選取"
-            android:textSize="20sp"
 
-            android:onClick="openAlbum" />
+            android:textSize="35dp" />
 
         <Button
             android:id="@+id/RecordButton"
-            android:layout_width="match_parent"
+            android:layout_width="352dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
             android:layout_marginBottom="50dp"
+            android:layout_gravity="center"
             android:layout_weight="1"
+            android:background="#FFFFB9"
+            android:onClick="openCameraFV5App"
             android:text="開啟 Camera FV-5"
-            android:textSize="20sp"
-
-            android:onClick="openCameraFV5App" />
+            android:textSize="35dp" />
 
         <Button
             android:id="@+id/testStrip2"
-            android:layout_width="match_parent"
+            android:layout_width="228dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginTop="50dp"
-            android:layout_marginBottom="50dp"
+            android:layout_marginBottom="75dp"
             android:layout_weight="1"
+            android:background="#FFFFB9"
+            android:onClick="openCamera"
             android:text="相機拍照"
-            android:textSize="20sp"
 
-            android:onClick="openCamera" />
+            android:textSize="35dp" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

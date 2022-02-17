@@ -5,14 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".TestStrip2ClassActivity">
+
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp">
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="-5dp"
+        tools:layout_editor_absoluteY="20dp">
 
         <TextView
             android:layout_width="match_parent"
@@ -22,31 +21,27 @@
             android:text="請選擇檢測類別"
             android:textSize="30sp" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
-
         <Button
-            android:layout_width="match_parent"
+            android:layout_width="211dp"
             android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="150dp"
             android:layout_weight="1.5"
-            android:text="加保扶"
+            android:background="#FFFFB9"
             android:onClick="openCarbofuran"
-            android:textSize="20sp" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
+            android:text="加保扶"
+            android:textSize="35sp" />
 
         <Button
-            android:layout_width="match_parent"
+            android:layout_width="211dp"
             android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="150dp"
+            android:layout_marginBottom="100dp"
             android:layout_weight="1.5"
+            android:background="#FFFFB9"
             android:text="芬普尼"
-
-            android:textSize="20sp" />
+            android:textSize="35sp" />
 
         <Space
             android:layout_width="match_parent"

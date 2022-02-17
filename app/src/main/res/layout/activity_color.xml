@@ -23,77 +23,69 @@
             android:text="請選擇檢測項目"
             android:textSize="30sp" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.2" />
-
         <Button
             android:id="@+id/testStrip1"
-            android:layout_width="match_parent"
+            android:layout_width="282dp"
             android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
             android:layout_weight="1"
+            android:background="#FFFFB9"
             android:onClick="openPhotoMode01"
             android:text="三聚氰胺檢測"
-
-            android:textSize="20sp" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.2" />
+            android:textSize="35dp" />
 
         <Button
             android:id="@+id/testStrip2"
-            android:layout_width="match_parent"
+            android:layout_width="282dp"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:onClick="openPhotoMode02"
+            android:background="#FFFFB9"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center"
             android:text="農藥檢測"
-
-            android:textSize="20sp" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.2" />
+            android:textSize="35dp" />
 
         <Button
             android:id="@+id/testStrip3"
-            android:layout_width="match_parent"
+            android:layout_width="282dp"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:onClick="openPhotoMode03"
-            android:text="毒化物檢測"
-            android:textSize="20sp" />
+            android:background="#FFFFB9"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center"
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.2" />
+            android:text="毒化物檢測"
+            android:textSize="35dp" />
 
         <Button
             android:id="@+id/testStrip4"
-            android:layout_width="match_parent"
+            android:layout_width="282dp"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:onClick="openPhotoMode04"
-            android:text="火炸藥檢測"
-            android:textSize="20sp" />
+            android:background="#FFFFB9"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center"
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.2" />
+            android:text="火炸藥檢測"
+            android:textSize="35dp" />
 
         <Button
             android:id="@+id/RecordButton"
-            android:layout_width="match_parent"
+            android:layout_width="282dp"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:onClick="seeList"
+            android:background="#FFFFB9"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="50dp"
+
             android:text="瀏覽檢測紀錄"
-            android:textSize="20sp" />
+            android:textSize="35dp" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

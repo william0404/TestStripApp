@@ -201,8 +201,6 @@ public class MapActivity extends AppCompatActivity {
         Log.d(TAG, "查詢定位");
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-
-
             if (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED ) {
                 // TODO: Consider calling
                 //    Activity#requestPermissions
@@ -232,16 +230,11 @@ public class MapActivity extends AppCompatActivity {
                 return;
             }
         }
-
-
-
         if (status.isProviderEnabled(LocationManager.GPS_PROVIDER) || status.isProviderEnabled(LocationManager.NETWORK_PROVIDER)) {
             location = status.getLastKnownLocation(LocationManager.PASSIVE_PROVIDER);
-
             if(location == null){
                 status.requestLocationUpdates("gps", 5000, 1, locationListener);
             }
-
             /*
             hud = KProgressHUD.create(MapActivity.this)
                     .setStyle(KProgressHUD.Style.SPIN_INDETERMINATE)
@@ -259,32 +252,29 @@ public class MapActivity extends AppCompatActivity {
                 Log.d(TAG, "latitude: " + lat);
                 double lng = location.getLongitude();
                 Log.d(TAG, "longitude: " + lng);
-                //HttpClient client = new DefaultHttpClient();
+//                HttpClient client = new DefaultHttpClient();
 
                 lat_text.setText(""+lat);
                 lng_text.setText(""+lng);
+                mWebView.loadHtml("<iframe \n" +
+                        "      width=\"600\" \n" +
+                        "      height=\"450\" \n" +
+                        "      frameborder=\"0\" \n" +
+                        "      style=\"border:0\" \n" +
+                        "      src=\"https://www.google.com/maps/embed/v1/place?key=AIzaSyCOApQin1hLn5gm462ZEeVFK1rOy_OeahE&q=" + lat + "," + lng+ "\" \n" +
+                        "      allowfullscreen>\n" +
+                        "  </iframe>");
 
-
-
-                //mWebView.loadUrl("https://www.google.com.tw/maps/@"+lat+","+lng+",15z?hl=zh-TW");
-
-                new Thread(runnable).start();
+//                new Thread(runnable).start();
             }
             else {
                 //hud.dismiss();
             }
-
-
-
-
         } else {
             Toast.makeText(this, "請開啟定位服務", Toast.LENGTH_LONG).show();
             getService = true; //確認開啟定位服務
             startActivity(new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS)); //開啟設定頁面
         }
-
-
-
     }
 
 
@@ -318,7 +308,6 @@ public class MapActivity extends AppCompatActivity {
         public void run() {
             // TODO: http request.
 
-
             if (location != null) {
                 //https://maps.googleapis.com/maps/api/geocode/json?latlng=40.714224,-73.961452&key=AIzaSyBVCWFH1HYg-VrNS5-gthRjrdp0mmzy6GE
 
@@ -340,15 +329,11 @@ public class MapActivity extends AppCompatActivity {
                     String full_address = obj2.getString("formatted_address");
                     Log.d(TAG, "full_address:" + full_address);
 
-
                     Message msg = new Message();
                     Bundle b = new Bundle();
                     b.putString("value", full_address);
                     msg.setData(b);
                     handler.sendMessage(msg);
-
-
-
                 } catch (IOException e) {
                     e.printStackTrace();
                 } catch (JSONException e) {
@@ -358,7 +343,6 @@ public class MapActivity extends AppCompatActivity {
                     //hud.dismiss();
                 }
             }
-
         }
     };
 

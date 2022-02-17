@@ -181,8 +181,6 @@ public class AirActivity extends AppCompatActivity {
         Log.d(TAG, "查詢天氣");
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-
-
             if (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED ) {
                 // TODO: Consider calling
                 //    Activity#requestPermissions
@@ -212,12 +210,8 @@ public class AirActivity extends AppCompatActivity {
                 return;
             }
         }
-
-
-
         if (status.isProviderEnabled(LocationManager.GPS_PROVIDER) || status.isProviderEnabled(LocationManager.NETWORK_PROVIDER)) {
             location = status.getLastKnownLocation(LocationManager.PASSIVE_PROVIDER);
-
             if(location == null){
                 status.requestLocationUpdates("gps", 5000, 1, locationListener);
             }
@@ -240,11 +234,8 @@ public class AirActivity extends AppCompatActivity {
                 Log.d(TAG, "latitude: " + lat);
                 double lng = location.getLongitude();
                 Log.d(TAG, "longitude: " + lng);
-
                 mWebView.loadUrl("https://weather.com/zh-TW/weather/today/"+lat+","+lng);
                 //HttpClient client = new DefaultHttpClient();
-
-
                 //new Thread(runnable).start();
             }
             else {

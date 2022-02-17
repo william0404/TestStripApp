@@ -22,48 +22,37 @@
             android:text="請選擇檢測類別"
             android:textSize="30sp" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
-
         <Button
-            android:layout_width="match_parent"
+            android:layout_width="237dp"
             android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="100dp"
             android:layout_weight="1.5"
+            android:background="#FFFFB9"
             android:text="TNT檢測"
 
-            android:textSize="20sp" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
+            android:textSize="35dp" />
 
         <Button
-            android:layout_width="match_parent"
+            android:layout_width="237dp"
             android:layout_height="0dp"
             android:layout_weight="1.5"
+            android:background="#FFFFB9"
+            android:layout_gravity="center"
+            android:layout_marginTop="75dp"
             android:text="RDX檢測"
-
-            android:textSize="20sp" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
+            android:textSize="35dp" />
 
         <Button
-            android:layout_width="match_parent"
+            android:layout_width="237dp"
             android:layout_height="0dp"
             android:layout_weight="1.5"
+            android:background="#FFFFB9"
+            android:layout_gravity="center"
+            android:layout_marginTop="75dp"
+            android:layout_marginBottom="100dp"
             android:text="HMX檢測"
-            android:textSize="20sp" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
+            android:textSize="35dp" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -23,6 +23,9 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 public class RamanMethodActivity extends AppCompatActivity {
 
@@ -97,11 +100,12 @@ public class RamanMethodActivity extends AppCompatActivity {
         if( !( "".equals( ramanEditText.getText().toString() ) ) ) {
             ramanValue = Float.parseFloat( ramanEditText.getText().toString() );
 
+            // ppmValue = ( ramanValue - wavelength _value) / baselin_value
             switch ( TESTSTRIP_ID ) {
                 case ColorActivity.TESTSTRIP_ID.TESTSTRIP_ID_FIRST: // 「三聚氰胺檢測」
                     ppmValue = ( ramanValue - 479.5f ) / 1548f;
 
-                    if( ppmValue < 0.f ) {
+                     if( ppmValue < 0.f ) {
                         ppmValue = 0.f;
                     }
 
@@ -210,9 +214,11 @@ public class RamanMethodActivity extends AppCompatActivity {
         try {
             File sdCard = Environment.getExternalStorageDirectory();
             File dir = new File(sdCard.getAbsolutePath() +"/" +getString(R.string.app_name));
+            Log.d("filee", dir.toString());
             dir.mkdirs();
-            String fileName = String.format("analysis.jpg");
-            File outFile = new File(dir, fileName);
+//            String fileName = String.format("analysis.jpg");
+            String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(new Date());
+            File outFile = new File(dir, "IMG_" + timeStamp + ".jpg");
             if(outFile.exists())
             {
                 outFile.delete();
@@ -227,10 +233,10 @@ public class RamanMethodActivity extends AppCompatActivity {
             bitmap=null;
 
         } catch (FileNotFoundException e) {
-            Toast.makeText(this,"截圖失敗,請重試",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"截圖失敗1,請重試",Toast.LENGTH_SHORT).show();
             e.printStackTrace();
         } catch (IOException e) {
-            Toast.makeText(this,"截圖失敗,請重試",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"截圖失敗2,請重試",Toast.LENGTH_SHORT).show();
             e.printStackTrace();
         }
 
