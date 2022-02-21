@@ -207,7 +207,7 @@ public class RamanMethodActivity extends AppCompatActivity {
 
         Log.e("Activity", "Pick from Camera::>>> ");
 
-        //String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(new Date());
+        //String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(new Date());  (yyyy.MM.dd_G'at'_HH:mm:ss_z新紀錄嘗試)
         //File destination = new File(Environment.getExternalStorageDirectory() + "/" +
         //        getString(R.string.app_name), "IMG_" + timeStamp + ".jpg");
         FileOutputStream fo;
@@ -217,7 +217,7 @@ public class RamanMethodActivity extends AppCompatActivity {
             Log.d("filee", dir.toString());
             dir.mkdirs();
 //            String fileName = String.format("analysis.jpg");
-            String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(new Date());
+            String timeStamp = new SimpleDateFormat("yyyy.MM.dd_G'at'_HH:mm:ss_z", Locale.getDefault()).format(new Date());
             File outFile = new File(dir, "IMG_" + timeStamp + ".jpg");
             if(outFile.exists())
             {
@@ -233,10 +233,10 @@ public class RamanMethodActivity extends AppCompatActivity {
             bitmap=null;
 
         } catch (FileNotFoundException e) {
-            Toast.makeText(this,"截圖失敗1,請重試",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"截圖失敗3,請重試",Toast.LENGTH_SHORT).show();
             e.printStackTrace();
         } catch (IOException e) {
-            Toast.makeText(this,"截圖失敗2,請重試",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"截圖失敗4,請重試",Toast.LENGTH_SHORT).show();
             e.printStackTrace();
         }
 

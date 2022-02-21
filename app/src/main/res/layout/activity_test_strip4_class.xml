@@ -5,14 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".TestStrip4ClassActivity">
+
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp">
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="39dp"
+        tools:layout_editor_absoluteY="62dp">
 
         <TextView
             android:layout_width="match_parent"
@@ -30,29 +29,28 @@
             android:layout_weight="1.5"
             android:background="#FFFFB9"
             android:text="TNT檢測"
-
-            android:textSize="35dp" />
+            android:textSize="35sp" />
 
         <Button
             android:layout_width="237dp"
             android:layout_height="0dp"
-            android:layout_weight="1.5"
-            android:background="#FFFFB9"
             android:layout_gravity="center"
             android:layout_marginTop="75dp"
+            android:layout_weight="1.5"
+            android:background="#FFFFB9"
             android:text="RDX檢測"
-            android:textSize="35dp" />
+            android:textSize="35sp" />
 
         <Button
             android:layout_width="237dp"
             android:layout_height="0dp"
-            android:layout_weight="1.5"
-            android:background="#FFFFB9"
             android:layout_gravity="center"
             android:layout_marginTop="75dp"
             android:layout_marginBottom="100dp"
+            android:layout_weight="1.5"
+            android:background="#FFFFB9"
             android:text="HMX檢測"
-            android:textSize="35dp" />
+            android:textSize="35sp" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

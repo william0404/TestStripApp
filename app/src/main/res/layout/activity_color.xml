@@ -32,7 +32,7 @@
             android:layout_weight="1"
             android:background="#FFFFB9"
             android:onClick="openPhotoMode01"
-            android:text="三聚氰胺檢測"
+            android:text="食品添加物"
             android:textSize="35dp" />
 
         <Button
