@@ -4,6 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.ContextWrapper;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
@@ -202,31 +205,32 @@ public class RamanMethodActivity extends AppCompatActivity {
         Bitmap bitmap = Bitmap.createBitmap(tableLayout.getDrawingCache());
 
 
-        ByteArrayOutputStream bytes = new ByteArrayOutputStream();
-        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
+//        ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+//        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
 
         Log.e("Activity", "Pick from Camera::>>> ");
 
         //String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(new Date());  (yyyy.MM.dd_G'at'_HH:mm:ss_z新紀錄嘗試)
         //File destination = new File(Environment.getExternalStorageDirectory() + "/" +
         //        getString(R.string.app_name), "IMG_" + timeStamp + ".jpg");
-        FileOutputStream fo;
-        try {
-            File sdCard = Environment.getExternalStorageDirectory();
-            File dir = new File(sdCard.getAbsolutePath() +"/" +getString(R.string.app_name));
-            Log.d("filee", dir.toString());
-            dir.mkdirs();
-//            String fileName = String.format("analysis.jpg");
-            String timeStamp = new SimpleDateFormat("yyyy.MM.dd_G'at'_HH:mm:ss_z", Locale.getDefault()).format(new Date());
-            File outFile = new File(dir, "IMG_" + timeStamp + ".jpg");
-            if(outFile.exists())
-            {
-                outFile.delete();
-            }
 
-            //destination.createNewFile();
-            fo = new FileOutputStream(outFile);
-            fo.write(bytes.toByteArray());
+        try {
+            File dir = new File(Environment.getExternalStorageDirectory() +  File.separator +"chemical");
+            if (!dir.exists()) {
+                dir.mkdirs();
+            }
+            Log.d("filee", dir.toString());
+            String fileName = new SimpleDateFormat("yyyyMMddHHmmss'.jpg'", Locale.getDefault()).format(new Date());
+            File outFile = new File(dir, fileName);
+            outFile.createNewFile();
+//            if(outFile.exists())
+//            {
+//                outFile.delete();
+//            }
+
+            FileOutputStream fo  = new FileOutputStream(outFile);;
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, fo);
+//            fo.write(bytes.toByteArray());
             fo.close();
             Toast.makeText(this,"截圖成功",Toast.LENGTH_SHORT).show();
             bitmap.recycle();
