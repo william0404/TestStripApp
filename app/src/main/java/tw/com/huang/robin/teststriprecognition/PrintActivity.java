@@ -107,8 +107,8 @@ public class PrintActivity extends AppCompatActivity {
         }
 
 
-
-        String fileName3 = String.format("analysis.jpg");
+        String analysis_filename = getSharedPreferences("filename", MODE_PRIVATE).getString("filename", "");
+        String fileName3 = String.format(analysis_filename);
         File outFile3 = new File(dir, fileName3);
         if(outFile3.exists())
         {

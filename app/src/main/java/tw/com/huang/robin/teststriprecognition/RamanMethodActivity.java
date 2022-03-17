@@ -4,10 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
-import android.annotation.SuppressLint;
-import android.content.Context;
-import android.content.ContextWrapper;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.os.Build;
@@ -21,7 +19,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -41,9 +38,10 @@ public class RamanMethodActivity extends AppCompatActivity {
     private LinearLayout tableLayout;
     private TextView ramanTilte;
     private Button okButton;
-
+    private SharedPreferences filename_pref;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_raman_method);
 
@@ -52,7 +50,7 @@ public class RamanMethodActivity extends AppCompatActivity {
         tableLayout = ( LinearLayout )findViewById( R.id.ramanTable );
         ramanTilte = ( TextView )findViewById( R.id.ramanTitle );
         okButton = ( Button )findViewById( R.id.okButton );
-
+        filename_pref = getSharedPreferences("filename", MODE_PRIVATE);
         // 獲取當下試紙類別
         Intent intent = getIntent();
         TESTSTRIP_ID = intent.getIntExtra( "TestStripID", 0 );
@@ -215,12 +213,14 @@ public class RamanMethodActivity extends AppCompatActivity {
         //        getString(R.string.app_name), "IMG_" + timeStamp + ".jpg");
 
         try {
-            File dir = new File(Environment.getExternalStorageDirectory() +  File.separator +"chemical");
+            File dir = new File(Environment.getExternalStorageDirectory() +  File.separator + getString(R.string.app_name));
             if (!dir.exists()) {
                 dir.mkdirs();
             }
             Log.d("filee", dir.toString());
             String fileName = new SimpleDateFormat("yyyyMMddHHmmss'.jpg'", Locale.getDefault()).format(new Date());
+            filename_pref.edit()
+                    .putString("filename",fileName).commit();
             File outFile = new File(dir, fileName);
             outFile.createNewFile();
 //            if(outFile.exists())
