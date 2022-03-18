@@ -82,7 +82,7 @@ public class RamanMethodActivity extends AppCompatActivity {
                         ramanTilte.setText( "請輸入拉曼圖譜\n特徵峰(345 cm-1)強度值" );
                         break;
                     case TestStrip3ClassActivity.TESTSTRIP3_TYPE.NERVE: // 「神經性」檢測
-                        ramanTilte.setText( "請輸入拉曼圖譜\n特徵峰(456 cm-1)強度值" );
+                        ramanTilte.setText( "請輸入拉曼圖譜\n特徵峰(710 cm-1)強度值" );
                         break;
                     default:
                         break;
@@ -158,7 +158,7 @@ public class RamanMethodActivity extends AppCompatActivity {
                             resultEditText.setText( String.format( "%.2f", ppmValue ) + " ppm" ); // 顯示 ppm 數值
                             break;
                         case TestStrip3ClassActivity.TESTSTRIP3_TYPE.NERVE: // 「神經性」檢測
-                            ppmValue = ( ramanValue - 2020.4f ) / 10001.4f;
+                            ppmValue = 1000*( ramanValue - 628.6612f ) / 246.6005f;
 
                             if( ppmValue < 0.01f ) {
                                 ppmValue = 0.01f;
